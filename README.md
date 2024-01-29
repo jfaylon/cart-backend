@@ -7,6 +7,7 @@ A Backend API for retrieving products from fakestoreapi.com and creation of a sh
 
 - Node v18.17.1
 - A Redis server
+- Running the cart-frontend
 
 ## Installation
 
@@ -72,3 +73,9 @@ $ npm run test
 - I have used a separate backend API for the cart-frontend rather than the frontend calling the external APIs for easier decoupling and processing of data. It also helps increase the security aspect so that the fronend can only query the backend server and the backend will handle all the external APIs in its stead. Also, as there is a data layer (Redis), it is more secure to have the session handling in the backend.
 - As of this writing (29 Jan 2024), the fakestoreapi does not have an offset feature. I have created a pagination feature for further improvements
 - Node v18.17.1 was used in developing the API; there is no guarantee that it may work for other Node versions.
+
+## Possible Improvements
+- Better error handling
+- Better error logging
+- Integration tests
+- Better `cors` handling for cookies
